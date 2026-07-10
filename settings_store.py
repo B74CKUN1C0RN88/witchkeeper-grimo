@@ -14,6 +14,7 @@ DEFAULTS: dict[str, Any] = {
     "translation_enabled": True,
     "birthday_role_id": None,
     "birthday_channel_id": None,
+    "moderation_log_channel_id": None,
 }
 
 
