@@ -15,6 +15,11 @@ DEFAULTS: dict[str, Any] = {
     "birthday_role_id": None,
     "birthday_channel_id": None,
     "moderation_log_channel_id": None,
+    "morning_channel_id": None,
+    "morning_enabled": False,
+    "morning_time": "07:00",
+    "morning_last_sent_date": None,
+    "morning_last_message_index": None,
 }
 
 

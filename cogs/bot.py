@@ -31,6 +31,7 @@ EXTENSIONS = (
     "cogs.welcome",
     "cogs.birthdays",
     "cogs.moderation",
+    "cogs.morning",
 )
 
 
