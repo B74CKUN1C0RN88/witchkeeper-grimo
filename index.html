@@ -3,54 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="WitchKeeper – der vielseitige Discord-Bot für Community, Moderation und Automatisierung.">
+  <meta name="description" content="WitchKeeper ist ein vielseitiger Discord-Bot für Verifizierung, Geburtstage, Übersetzung und Community-Verwaltung.">
   <title>WitchKeeper – Discord Community Bot</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
-  <nav><div class="container nav-inner">
-    <a class="brand" href="#top"><img src="logo.png" alt="WitchKeeper"><span>WitchKeeper</span></a>
-    <div class="nav-links"><a href="#features">Funktionen</a><a href="#commands">Befehle</a><a href="#roadmap">Roadmap</a><a href="privacy.html">Datenschutz</a></div>
-    <a class="nav-cta" href="https://github.com/B74CKUN1C0RN88/witchkeeper-grimo">GitHub ↗</a>
-  </div></nav>
-
-  <main id="top">
-    <section class="container hero">
-      <div class="hero-copy">
-        <div class="status"><span></span> WitchKeeper ist online</div>
-        <p class="eyebrow">Discord Community Assistant</p>
-        <h1>Mehr Gemeinschaft.<br><em>Weniger Aufwand.</em></h1>
-        <p class="lead">Ein moderner Multiserver-Bot für Verifizierung, Moderation, Geburtstage, Übersetzung und tägliche Community-Automatisierung.</p>
-        <div class="actions"><a class="button primary" href="#features">Funktionen entdecken</a><a class="button ghost" href="#commands">Befehle ansehen</a></div>
-        <div class="quick-stats"><div><strong>24/7</strong><span>Online</span></div><div><strong>4</strong><span>Befehlsgruppen</span></div><div><strong>100%</strong><span>Multiserver</span></div></div>
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><img src="logo.png" alt="WitchKeeper Logo">WitchKeeper</a>
+      <div class="nav-links">
+        <a href="#funktionen">Funktionen</a>
+        <a href="#befehle">Befehle</a>
+        <a href="#status">Projektstatus</a>
+        <a href="terms.html">Nutzungsbedingungen</a>
+        <a href="privacy.html">Datenschutz</a>
       </div>
-      <div class="hero-visual"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="logo-glow"><img src="logo.png" alt="WitchKeeper Logo"></div><span class="float-chip chip-one">⚠️ Auto-Logs</span><span class="float-chip chip-two">🎂 Geburtstage</span><span class="float-chip chip-three">☀️ Guten Morgen</span></div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="hero">
+      <div>
+        <div class="eyebrow">Discord Community Assistant</div>
+        <h1>Magische Ordnung für deinen Server.</h1>
+        <p class="lead">WitchKeeper vereint Verifizierung, Geburtstage, automatische Übersetzung sowie Willkommens- und Abschiedsmeldungen in einem multiserverfähigen Discord-Bot.</p>
+        <div class="actions">
+          <a class="button primary" href="#funktionen">Funktionen ansehen</a>
+          <a class="button" href="https://github.com/B74CKUN1C0RN88/witchkeeper-grimo">GitHub</a>
+        </div>
+      </div>
+      <div class="logo-card"><img src="logo.png" alt="WitchKeeper Logo"></div>
+    </div>
+
+    <section id="funktionen">
+      <div class="eyebrow">Funktionen</div>
+      <h2>Ein Bot, viele Aufgaben</h2>
+      <div class="grid">
+        <article class="card"><h3>✅ Verifizierung</h3><p>Mitglieder verifizieren sich per Button und erhalten automatisch die festgelegte Serverrolle.</p></article>
+        <article class="card"><h3>🎂 Geburtstage</h3><p>Geburtstage werden pro Server gespeichert. Am Geburtstag vergibt WitchKeeper eine Rolle und sendet Glückwünsche.</p></article>
+        <article class="card"><h3>🌍 Übersetzung</h3><p>Englischsprachige Nachrichten können automatisch ins Deutsche übersetzt werden.</p></article>
+        <article class="card"><h3>🙌 Willkommen & Abschied</h3><p>Neue und austretende Mitglieder werden automatisch im vorgesehenen Kanal angezeigt.</p></article>
+        <article class="card"><h3>⚙️ Servereinstellungen</h3><p>Administratoren verwalten Rollen, Kanäle und Funktionen über übersichtliche Slash-Befehle.</p></article>
+        <article class="card"><h3>⚠️ Warnsystem</h3><p>Moderatoren können Verwarnungen erteilen, anzeigen und gezielt wieder entfernen. Alle Einträge werden getrennt pro Server gespeichert.</p></article>
+        <article class="card"><h3>📜 Moderationsprotokoll</h3><p>Gelöschte und bearbeitete Nachrichten, Verwarnungen sowie Bans und aufgehobene Bans werden automatisch dokumentiert.</p></article>
+        <article class="card"><h3>☀️ Morgenbegrüßung</h3><p>WitchKeeper begrüßt die Community jeden Morgen automatisch mit wechselnden Texten. Kanal und Uhrzeit lassen sich pro Server einstellen.</p></article>
+        <article class="card"><h3>🟣 Twitch-Streams</h3><p>Eigene Lieblingsstreamer beobachten und beim Live-Start automatisch Titel, Kategorie, Zuschauerzahl, Vorschaubild und Stream-Link anzeigen.</p></article>
+        <article class="card"><h3>🖥️ Rund um die Uhr online</h3><p>WitchKeeper läuft dauerhaft auf einem Linux-Server und ist unabhängig vom Entwickler-PC erreichbar.</p></article>
+      </div>
     </section>
 
-    <section class="container section" id="features">
-      <div class="section-heading"><div><p class="eyebrow">Funktionen</p><h2>Alles, was deine Community braucht.</h2></div><p>Servereigene Einstellungen sorgen dafür, dass WitchKeeper auf jedem Discord-Server genau passend arbeitet.</p></div>
-      <div class="bento">
-        <article class="feature wide accent"><span class="icon">🛡️</span><div><h3>Moderation & Warnungen</h3><p>Verwarnungen erteilen, prüfen und entfernen. Gelöschte oder bearbeitete Nachrichten sowie Bans werden automatisch protokolliert.</p><div class="tags"><span>/moderation warn</span><span>/moderation warnings</span><span>/moderation unwarn</span></div></div></article>
-        <article class="feature"><span class="icon">✅</span><h3>Verifizierung</h3><p>Sicherer Button-Flow mit automatischer Rollenvergabe.</p></article>
-        <article class="feature"><span class="icon">🎂</span><h3>Geburtstage</h3><p>Rolle, Glückwunsch und Übersicht – automatisch pro Server.</p></article>
-        <article class="feature"><span class="icon">☀️</span><h3>Morgenbegrüßung</h3><p>Täglich wechselnde Texte zur gewünschten Uhrzeit in deinem Kanal.</p></article>
-        <article class="feature"><span class="icon">🌍</span><h3>Übersetzung</h3><p>Englische Nachrichten automatisch ins Deutsche übertragen.</p></article>
-        <article class="feature wide"><span class="icon">🙌</span><div><h3>Willkommen & Abschied</h3><p>Begrüße neue Mitglieder und verabschiede austretende Nutzer automatisch im vorgesehenen Kanal.</p></div></article>
+    <section id="befehle">
+      <div class="eyebrow">Slash-Befehle</div>
+      <h2>Schnell und übersichtlich</h2>
+      <div class="grid">
+        <article class="card"><h3>/setup</h3><p>Servereigene Rollen, Kanäle, Übersetzung, Geburtstage und das Moderationsprotokoll konfigurieren.</p></article>
+        <article class="card"><h3>/birthday</h3><p>Geburtstag speichern, entfernen und anzeigen sowie die nächsten Geburtstage auflisten.</p></article>
+        <article class="card"><h3>/moderation</h3><p>Mitglieder verwarnen, vorhandene Verwarnungen anzeigen und einzelne Einträge entfernen.</p></article>
+        <article class="card"><h3>/morgen</h3><p>Die tägliche Begrüßung aktivieren, deaktivieren, testen und ihre aktuellen Einstellungen anzeigen.</p></article>
+        <article class="card"><h3>/twitch</h3><p>Streamer hinzufügen oder entfernen sowie Favoritenliste und aktuellen Live-Status anzeigen.</p></article>
       </div>
     </section>
 
-    <section class="command-section" id="commands"><div class="container command-layout">
-      <div><p class="eyebrow">Slash-Befehle</p><h2>Einfach einzurichten.<br>Schnell zu bedienen.</h2><p class="lead small">Alle wichtigen Funktionen sind über verständliche Slash-Befehle erreichbar. Administratoren konfigurieren jeden Server unabhängig.</p></div>
-      <div class="terminal"><div class="terminal-top"><i></i><i></i><i></i><span>WitchKeeper Commands</span></div><div class="command-list"><p><b>/setup</b><span>Rollen, Kanäle und Module konfigurieren</span></p><p><b>/birthday</b><span>Geburtstage verwalten und anzeigen</span></p><p><b>/moderation</b><span>Warnungen erteilen und verwalten</span></p><p><b>/morgen</b><span>Begrüßung aktivieren, testen und prüfen</span></p></div></div>
-    </div></section>
-
-    <section class="container section" id="roadmap">
-      <div class="section-heading"><div><p class="eyebrow">Projektstatus</p><h2>Die Magie wächst weiter.</h2></div></div>
-      <div class="roadmap"><article><span class="done">✓</span><small>Verfügbar</small><h3>Community-Grundsystem</h3><p>Verifizierung, Welcome/Goodbye, Übersetzung und Multiserver-Setup.</p></article><article><span class="done">✓</span><small>Verfügbar</small><h3>Moderation & Alltag</h3><p>Warnungen, Logs, Geburtstage und tägliche Morgenbegrüßungen.</p></article><article><span class="next">→</span><small>Als Nächstes</small><h3>AutoMod</h3><p>Spam-, Link-, Schimpfwort- und Caps-Lock-Erkennung.</p></article><article><span class="later">◇</span><small>Geplant</small><h3>Tickets & Dashboard</h3><p>Support-Tickets und eine komfortable Webverwaltung.</p></article></div>
+    <section id="status">
+      <div class="eyebrow">Projektstatus</div>
+      <h2>WitchKeeper wächst weiter</h2>
+      <div class="grid">
+        <article class="card"><h3>✅ Verfügbar</h3><p>Verifizierung, Übersetzung, Welcome/Goodbye, Multiserver-Setup, Geburtstage, Warnsystem, Moderationsprotokolle, Morgenbegrüßungen und Twitch-Livemeldungen.</p></article>
+        <article class="card"><h3>🛡️ Als Nächstes</h3><p>AutoMod mit Spam-, Link-, Schimpfwort- und Caps-Lock-Erkennung.</p></article>
+        <article class="card"><h3>🔮 Geplant</h3><p>Musikmodul, Ticket-System und ein eigenes Web-Dashboard.</p></article>
+      </div>
     </section>
   </main>
 
-  <footer><div class="container footer-inner"><a class="brand" href="#top"><img src="logo.png" alt="">WitchKeeper</a><p>Magische Ordnung für deine Discord-Community.</p><div><a href="terms.html">Nutzungsbedingungen</a><a href="privacy.html">Datenschutz</a><a href="https://github.com/B74CKUN1C0RN88/witchkeeper-grimo">GitHub</a></div></div></footer>
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 WitchKeeper / Grimo</span>
+      <span><a href="terms.html">Nutzungsbedingungen</a> · <a href="privacy.html">Datenschutz</a> · <a href="https://github.com/B74CKUN1C0RN88/witchkeeper-grimo">GitHub</a></span>
+    </div>
+  </footer>
 </body>
 </html>
