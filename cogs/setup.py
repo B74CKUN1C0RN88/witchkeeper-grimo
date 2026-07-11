@@ -163,6 +163,7 @@ class SetupCog(commands.GroupCog, group_name="setup", group_description="Richtet
 
         birthday_role = interaction.guild.get_role(settings["birthday_role_id"])
         birthday_channel = interaction.guild.get_channel(settings["birthday_channel_id"])
+        moderation_channel = interaction.guild.get_channel(settings["moderation_log_channel_id"])
 
         embed.add_field(
             name="Geburtstagsrolle",
@@ -176,8 +177,81 @@ class SetupCog(commands.GroupCog, group_name="setup", group_description="Richtet
             inline=False
         )
 
+        embed.add_field(
+            name="Moderationsprotokoll",
+            value=moderation_channel.mention if moderation_channel else "Nicht gesetzt",
+            inline=False
+        )
+
         await interaction.response.send_message(
             embed=embed,
+            ephemeral=True
+        )
+
+    @app_commands.command(
+        name="moderation",
+        description="Legt den Kanal für Moderationsprotokolle fest."
+    )
+    async def moderation(
+        self,
+        interaction: discord.Interaction,
+        kanal: discord.TextChannel
+    ):
+        await update_guild_settings(
+            interaction.guild.id,
+            moderation_log_channel_id=kanal.id
+        )
+        await interaction.response.send_message(
+            f"✅ Moderationsprotokoll gespeichert: {kanal.mention}",
+            ephemeral=True
+        )
+
+    @app_commands.command(
+        name="morgen",
+        description="Richtet die tägliche Morgenbegrüßung ein."
+    )
+    @app_commands.describe(kanal="Kanal für die Begrüßung", uhrzeit="Uhrzeit im Format HH:MM")
+    async def morgen(
+        self,
+        interaction: discord.Interaction,
+        kanal: discord.TextChannel,
+        uhrzeit: str = "07:00"
+    ):
+        try:
+            hour_text, minute_text = uhrzeit.split(":", 1)
+            hour, minute = int(hour_text), int(minute_text)
+            if not 0 <= hour <= 23 or not 0 <= minute <= 59:
+                raise ValueError
+        except (ValueError, AttributeError):
+            await interaction.response.send_message(
+                "❌ Bitte nutze das Uhrzeitformat `HH:MM`, zum Beispiel `07:00`.",
+                ephemeral=True
+            )
+            return
+        normalized_time = f"{hour:02d}:{minute:02d}"
+        await update_guild_settings(
+            interaction.guild.id,
+            morning_channel_id=kanal.id,
+            morning_time=normalized_time,
+            morning_enabled=True
+        )
+        await interaction.response.send_message(
+            f"✅ Morgenbegrüßung in {kanal.mention} um **{normalized_time} Uhr** aktiviert.",
+            ephemeral=True
+        )
+
+    @app_commands.command(
+        name="twitch",
+        description="Legt den Kanal für Twitch-Livebenachrichtigungen fest."
+    )
+    async def twitch(
+        self,
+        interaction: discord.Interaction,
+        kanal: discord.TextChannel
+    ):
+        await update_guild_settings(interaction.guild.id, twitch_channel_id=kanal.id)
+        await interaction.response.send_message(
+            f"✅ Twitch-Benachrichtigungen werden in {kanal.mention} gesendet.",
             ephemeral=True
         )
 
