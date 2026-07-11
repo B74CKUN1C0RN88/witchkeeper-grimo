@@ -32,6 +32,7 @@ EXTENSIONS = (
     "cogs.birthdays",
     "cogs.moderation",
     "cogs.morning",
+    "cogs.twitch",
 )
 
 

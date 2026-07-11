@@ -20,6 +20,10 @@ DEFAULTS: dict[str, Any] = {
     "morning_time": "07:00",
     "morning_last_sent_date": None,
     "morning_last_message_index": None,
+    "twitch_channel_id": None,
+    "twitch_streamers": [],
+    "twitch_live_states": {},
+    "twitch_last_streams": {},
 }
 
 
